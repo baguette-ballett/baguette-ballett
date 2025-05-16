@@ -1,12 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=9 format=3 uid="uid://clhd0m3qtl5xu"]
 
+[ext_resource type="Script" uid="uid://bffd7f2ih6a6c" path="res://baguette.gd" id="1_oi3di"]
 [ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="1_u52ul"]
 [ext_resource type="Script" uid="uid://58aex222u1a5" path="res://player.gd" id="2_vonw3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vonw3"]
+radius = 12.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u52ul"]
 radius = 33.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vonw3"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
 
@@ -17,20 +21,19 @@ size = Vector2(1181, 48)
 
 [node name="baguette" type="RigidBody2D" parent="."]
 position = Vector2(560, 202)
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_oi3di")
 
-[node name="testsp" type="Sprite2D" parent="baguette"]
+[node name="baguette sprite" type="Sprite2D" parent="baguette"]
 texture = ExtResource("1_u52ul")
 
-[node name="testcol" type="CollisionShape2D" parent="baguette"]
+[node name="baguette collision" type="CollisionShape2D" parent="baguette"]
 scale = Vector2(5, 5)
 shape = SubResource("CapsuleShape2D_vonw3")
 
 [node name="player" type="CharacterBody2D" parent="."]
 position = Vector2(576, 593)
-collision_layer = 3
-collision_mask = 3
 script = ExtResource("2_vonw3")
 
 [node name="player collision" type="CollisionShape2D" parent="player"]
@@ -40,9 +43,19 @@ shape = SubResource("CircleShape2D_u52ul")
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_u52ul")
 
+[node name="player area" type="Area2D" parent="player"]
+scale = Vector2(4, 4)
+collision_layer = 3
+collision_mask = 3
+
+[node name="player area collision" type="CollisionShape2D" parent="player/player area"]
+shape = SubResource("CircleShape2D_vonw3")
+
 [node name="ground body" type="StaticBody2D" parent="."]
 position = Vector2(583, 654)
 scale = Vector2(1, 1)
+collision_layer = 3
+collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_u52ul")
 
 [node name="ground collision" type="CollisionShape2D" parent="ground body"]
@@ -51,3 +64,5 @@ shape = SubResource("RectangleShape2D_5xgho")
 [node name="ground sprite" type="Sprite2D" parent="ground body"]
 scale = Vector2(9.1875, 0.382812)
 texture = ExtResource("1_u52ul")
+
+[connection signal="body_entered" from="player/player area" to="baguette" method="_on_player_area_body_entered"]
