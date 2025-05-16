@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://clhd0m3qtl5xu"]
+
+[ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="1_u52ul"]
+[ext_resource type="Script" uid="uid://58aex222u1a5" path="res://player.gd" id="2_vonw3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vonw3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u52ul"]
+radius = 33.0
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5xgho"]
+size = Vector2(1181, 48)
+
+[node name="level" type="Node2D"]
+
+[node name="baguette" type="RigidBody2D" parent="."]
+position = Vector2(560, 202)
+collision_layer = 3
+collision_mask = 3
+
+[node name="testsp" type="Sprite2D" parent="baguette"]
+texture = ExtResource("1_u52ul")
+
+[node name="testcol" type="CollisionShape2D" parent="baguette"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_vonw3")
+
+[node name="player" type="CharacterBody2D" parent="."]
+position = Vector2(576, 593)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_vonw3")
+
+[node name="player collision" type="CollisionShape2D" parent="player"]
+shape = SubResource("CircleShape2D_u52ul")
+
+[node name="player sprite" type="Sprite2D" parent="player"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_u52ul")
+
+[node name="ground body" type="StaticBody2D" parent="."]
+position = Vector2(583, 654)
+scale = Vector2(1, 1)
+physics_material_override = SubResource("PhysicsMaterial_u52ul")
+
+[node name="ground collision" type="CollisionShape2D" parent="ground body"]
+shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="ground sprite" type="Sprite2D" parent="ground body"]
+scale = Vector2(9.1875, 0.382812)
+texture = ExtResource("1_u52ul")
