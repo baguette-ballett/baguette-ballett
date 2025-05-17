@@ -20,7 +20,7 @@ position = Vector2(-277, 325)
 texture = ExtResource("1_hnne4")
 
 [node name="background right" type="Sprite2D" parent="."]
-position = Vector2(1643, 325)
+position = Vector2(1642, 325)
 texture = ExtResource("2_vpf64")
 
 [node name="baguette" parent="." instance=ExtResource("1_5lpb7")]
