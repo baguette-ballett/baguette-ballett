@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=8 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
 [ext_resource type="Script" uid="uid://lxh70038xkds" path="res://scenes/level/level.gd" id="1_vpf64"]
 [ext_resource type="PackedScene" uid="uid://nmxc788sia0e" path="res://scenes/player/player.tscn" id="2_s8ale"]
 [ext_resource type="Texture2D" uid="uid://d3ep8peebrglw" path="res://assets/sprites/background_right.png" id="2_vpf64"]
-[ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="3_plauu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
 
@@ -38,8 +37,3 @@ physics_material_override = SubResource("PhysicsMaterial_u52ul")
 [node name="ground collision" type="CollisionShape2D" parent="ground body"]
 position = Vector2(55, 0)
 shape = SubResource("RectangleShape2D_5xgho")
-
-[node name="ground sprite" type="Sprite2D" parent="ground body"]
-visible = false
-scale = Vector2(9.1875, 0.382812)
-texture = ExtResource("3_plauu")
