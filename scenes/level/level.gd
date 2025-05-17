@@ -15,7 +15,7 @@ func _on_spawn_timer_timeout():
 
 	var direction = randf_range(-PI / 8, PI / 8)
 	baguette.rotation = direction
-	var velocity = Vector2(randf_range(200.0, 500.0), -700.0)
+	var velocity = Vector2(randf_range(200.0, 1000.0), -700.0)
 	baguette.linear_velocity = velocity.rotated(direction)
 
 	add_child(baguette)
