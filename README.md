@@ -2,11 +2,11 @@
 
 Mother duck needs to feed her children[^children] and luckily there's a boy[^boy] with lots of baguettes.
 
-Be efficient and _balance_ the baguettes on your head, so you need less trips to the pond to feed your ducklings. Running around with a stack of baguettes on your head requires precision and poise, just like in ballet practice.
+Be efficient and _balance_ the baguettes on your head, so you need fewer trips to the pond to feed your ducklings. Running around with a stack of baguettes on your head requires precision and poise, just like in ballet practice.
 
 Don't let the bread go moldy[^moldy] and don't let it fall[^fall], those little ducklings are very hungry!
 
-[^boy]: his name is probably Francois or Jacques, definitly very French
+[^boy]: his name is probably Francois or Jacques, definitely very French
 [^children]: see if we actually implemented ducklings in issues [#18](https://github.com/baguette-ballett/baguette-ballett/issues/18) and [#19](https://github.com/baguette-ballett/baguette-ballett/issues/19)
 [^moldy]: see if we actually implemented moldy bread in issue [#21](https://github.com/baguette-ballett/baguette-ballett/issues/21)
 [^fall]: dropped bread is lost forever, so be careful to catch it
