@@ -6,7 +6,7 @@ Of course, humans know that bread isn't good for ducks - but mother duck knows b
 
 Help her feed her ducklings, don't let the bread mold and don't let it fall, those little ducklings are very hungry!
 
-<img src="assets/screenshots/menu.png" width="50%" /><img src="assets/screenshots/level.png" width="50%" />
+<img src="assets/screenshots/intro.png" width="50%" /><img src="assets/screenshots/level.png" width="50%" />
 
 This game was made during the [Hetzner Game Jam 2025](https://github.com/hetzneronline/game-jam) in 48 hours.
 
