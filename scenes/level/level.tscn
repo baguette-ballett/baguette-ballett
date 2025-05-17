@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=10 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
@@ -12,8 +12,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xgho"]
 size = Vector2(4056, 48)
 
+[sub_resource type="Curve2D" id="Curve2D_vpf64"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 115, 173, 0, 0, 0, 0, 106, 268, 0, 0, 0, 0, 198, 272, 0, 0, 0, 0, 194, 175, 0, 0, 0, 0, 115, 173)
+}
+point_count = 5
+
 [node name="level" type="Node2D"]
 script = ExtResource("1_vpf64")
+baguettes = ExtResource("1_5lpb7")
 
 [node name="background left" type="Sprite2D" parent="."]
 position = Vector2(-277, 325)
@@ -25,9 +32,6 @@ texture = ExtResource("2_vpf64")
 
 [node name="Boy" parent="." instance=ExtResource("6_wcngd")]
 position = Vector2(98, 217)
-
-[node name="baguette" parent="." instance=ExtResource("1_5lpb7")]
-position = Vector2(563, -63)
 
 [node name="player" parent="." instance=ExtResource("2_s8ale")]
 position = Vector2(570, 457)
@@ -41,3 +45,16 @@ physics_material_override = SubResource("PhysicsMaterial_u52ul")
 [node name="ground collision" type="CollisionShape2D" parent="ground body"]
 position = Vector2(55, 0)
 shape = SubResource("RectangleShape2D_5xgho")
+
+[node name="SpawnArea" type="Path2D" parent="."]
+curve = SubResource("Curve2D_vpf64")
+
+[node name="SpawnAreaLocation" type="PathFollow2D" parent="SpawnArea"]
+position = Vector2(115, 173)
+rotation = 1.66525
+
+[node name="SpawnTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
