@@ -17,3 +17,11 @@ texture = ExtResource("2_g43ox")
 [node name="baguette collision" type="CollisionShape2D" parent="."]
 scale = Vector2(5, 5)
 shape = SubResource("CapsuleShape2D_vonw3")
+
+[node name="baguette area" type="Area2D" parent="."]
+
+[node name="baguette area collision" type="CollisionShape2D" parent="baguette area"]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_vonw3")
+
+[connection signal="body_entered" from="baguette area" to="." method="_on_baguette_area_entered"]

@@ -2,9 +2,6 @@ extends CharacterBody2D
 
 var walkSpeed = 1000.0
 
-func _ready():
-	print("hello world")
-
 func _physics_process(delta):
 	velocity.y = 100.0
 	get_input(delta)
