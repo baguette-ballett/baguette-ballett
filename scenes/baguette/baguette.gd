@@ -4,6 +4,10 @@ func _ready():
 	self.rotation_degrees = randf_range(-180.0, 180.0)
 
 func _on_baguette_area_entered(body):
+	if body.name == "ground body":
+		get_parent().remove_child(self)
+		self.queue_free()
+
 	if body.name != "player" and body.name != 'baguette':
 		return
 
