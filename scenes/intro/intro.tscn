@@ -32,14 +32,15 @@ layout_mode = 2
 text = "Start"
 script = ExtResource("4_1rrv8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(956, 463)
-scale = Vector2(1.44588, 0.769885)
-texture = ExtResource("3_teox7")
-
-[node name="Duckpoop" type="CharacterBody2D" parent="Sprite2D"]
-scale = Vector2(0.157715, 0.109375)
+[node name="Duckpoop" type="CharacterBody2D" parent="."]
+position = Vector2(956, -750)
+scale = Vector2(0.228037, 0.0842062)
 script = ExtResource("4_ir5dn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Duckpoop"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Duckpoop"]
+scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_ir5dn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Duckpoop"]
+scale = Vector2(6.34055, 9.14286)
+texture = ExtResource("3_teox7")
