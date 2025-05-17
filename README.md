@@ -23,3 +23,5 @@ Thanks to [Hetzner](https://hetzner.com) for organizing this event.
 ## Credits
 * [Godot Engine](https://docs.godotengine.org/en/stable/index.html)
 * [ChatGPT](https://chatgpt.com)
+* [Xeno Canto](https://xeno-canto.org/785938)
+
