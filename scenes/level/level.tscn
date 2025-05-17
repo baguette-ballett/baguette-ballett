@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=10 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nmxc788sia0e" path="res://scenes/player/player.tscn" id="2_s8ale"]
 [ext_resource type="Texture2D" uid="uid://d3ep8peebrglw" path="res://assets/sprites/background_right.png" id="2_vpf64"]
 [ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="3_plauu"]
+[ext_resource type="PackedScene" uid="uid://5hvp3ygscuig" path="res://scenes/boy/boy.tscn" id="6_wcngd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
 
@@ -28,6 +29,9 @@ position = Vector2(563, -63)
 
 [node name="player" parent="." instance=ExtResource("2_s8ale")]
 position = Vector2(570, 457)
+
+[node name="Boy" parent="." instance=ExtResource("6_wcngd")]
+position = Vector2(98, 217)
 
 [node name="ground body" type="StaticBody2D" parent="."]
 position = Vector2(574, 539)
