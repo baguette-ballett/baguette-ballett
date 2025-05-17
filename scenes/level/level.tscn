@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=13 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d3ep8peebrglw" path="res://assets/sprites/background_right.png" id="2_vpf64"]
 [ext_resource type="PackedScene" uid="uid://5hvp3ygscuig" path="res://scenes/boy/boy.tscn" id="6_wcngd"]
 [ext_resource type="AudioStream" uid="uid://cyhrg1m2rpgmj" path="res://assets/sounds/Sergio_27s_Magic_Dustbin.mp3" id="7_wcngd"]
+[ext_resource type="Texture2D" uid="uid://ckbvfvvt86i3u" path="res://assets/sprites/buttonLeft.png" id="7_xv074"]
+[ext_resource type="Texture2D" uid="uid://xnw6sx0diw5p" path="res://assets/sprites/buttonRight.png" id="8_sytrn"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
 
@@ -61,5 +63,37 @@ autostart = true
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_wcngd")
 autoplay = true
+
+[node name="Control (full layout)" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bottom right" type="MarginContainer" parent="Control (full layout)"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="button left" type="TouchScreenButton" parent="Control (full layout)/bottom right"]
+texture_normal = ExtResource("7_xv074")
+action = "left"
+visibility_mode = 1
+
+[node name="button right" type="TouchScreenButton" parent="Control (full layout)/bottom right"]
+position = Vector2(100, 0)
+texture_normal = ExtResource("8_sytrn")
+action = "right"
+visibility_mode = 1
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
