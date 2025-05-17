@@ -23,12 +23,11 @@ script = ExtResource("1_8twl8")
 
 [node name="background" type="Sprite2D" parent="."]
 show_behind_parent = true
-position = Vector2(580.444, 322.25)
-scale = Vector2(0.60787, 0.60787)
+position = Vector2(960, 540)
 texture = ExtResource("2_ueo4n")
 
 [node name="Clean Sign" type="Sprite2D" parent="."]
-position = Vector2(437, 537)
+position = Vector2(721, 869)
 scale = Vector2(0.474, 0.5)
 texture = ExtResource("1_ioskq")
 
@@ -38,10 +37,10 @@ autoplay = true
 
 [node name="Buttons" type="BoxContainer" parent="."]
 custom_minimum_size = Vector2(200, 100)
-offset_left = 850.0
-offset_top = 274.0
-offset_right = 1150.0
-offset_bottom = 374.0
+offset_left = 1392.0
+offset_top = 384.0
+offset_right = 1692.0
+offset_bottom = 484.0
 
 [node name="StartButton" type="Button" parent="Buttons"]
 custom_minimum_size = Vector2(200, 100)
@@ -74,7 +73,7 @@ stream = ExtResource("8_xk0cr")
 volume_db = 24.0
 
 [node name="logo" type="Sprite2D" parent="."]
-position = Vector2(662, 362)
+position = Vector2(1050, 568)
 texture = ExtResource("10_ueo4n")
 
 [node name="boy" type="Sprite2D" parent="."]
@@ -87,26 +86,26 @@ scale = Vector2(0.386875, 0.386875)
 texture = ExtResource("11_ueo4n")
 
 [node name="title" type="RichTextLabel" parent="."]
-offset_left = 482.0
-offset_top = 41.0
-offset_right = 1012.0
-offset_bottom = 139.0
+offset_left = 726.0
+offset_top = 93.0
+offset_right = 1256.0
+offset_bottom = 191.0
 theme_override_colors/default_color = Color(0.192157, 0.180392, 0.180392, 1)
 theme_override_font_sizes/normal_font_size = 48
 text = "Baguette Ballett"
 
 [node name="Duckling1" type="Sprite2D" parent="."]
-position = Vector2(752, 558)
+position = Vector2(1222, 928)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("13_kfk32")
 flip_h = true
 
 [node name="Duckling2" type="Sprite2D" parent="."]
-position = Vector2(1055, 529)
+position = Vector2(1525, 899)
 scale = Vector2(0.421875, 0.5)
 texture = ExtResource("13_kfk32")
 
 [node name="Duckling3" type="Sprite2D" parent="."]
-position = Vector2(932, 570)
+position = Vector2(1402, 940)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("13_kfk32")

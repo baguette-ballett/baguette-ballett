@@ -31,27 +31,28 @@ position = Vector2(-277, 325)
 texture = ExtResource("1_hnne4")
 
 [node name="background right" type="Sprite2D" parent="."]
-position = Vector2(528, 265)
+position = Vector2(960, 540)
 texture = ExtResource("2_vpf64")
 
 [node name="Boy" parent="." instance=ExtResource("6_wcngd")]
-position = Vector2(98, 217)
+position = Vector2(147, 466)
 
 [node name="player" parent="." instance=ExtResource("2_s8ale")]
-position = Vector2(570, 457)
+position = Vector2(832, 738)
 
 [node name="ground body" parent="." instance=ExtResource("7_tf2q7")]
-position = Vector2(574, 539)
+position = Vector2(583, 855)
 
 [node name="wall left" type="CollisionShape2D" parent="ground body"]
 position = Vector2(-616, -46)
 shape = SubResource("RectangleShape2D_pe1ox")
 
 [node name="wall right" type="CollisionShape2D" parent="ground body"]
-position = Vector2(615, -47)
+position = Vector2(1346, -47)
 shape = SubResource("RectangleShape2D_pe1ox")
 
 [node name="SpawnArea" type="Path2D" parent="."]
+position = Vector2(71, 218)
 curve = SubResource("Curve2D_vpf64")
 
 [node name="SpawnAreaLocation" type="PathFollow2D" parent="SpawnArea"]
@@ -67,18 +68,18 @@ stream = ExtResource("7_wcngd")
 autoplay = true
 
 [node name="Duckling1" type="Sprite2D" parent="."]
-position = Vector2(745, 605)
+position = Vector2(1237, 920)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 flip_h = true
 
 [node name="Duckling2" type="Sprite2D" parent="."]
-position = Vector2(1057, 576)
+position = Vector2(1549, 891)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 
 [node name="Duckling3" type="Sprite2D" parent="."]
-position = Vector2(915, 611)
+position = Vector2(1407, 926)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 
@@ -87,8 +88,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 
