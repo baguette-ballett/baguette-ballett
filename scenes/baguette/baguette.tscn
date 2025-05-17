@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1lt6og2rw05e"]
+
+[ext_resource type="Script" uid="uid://bffd7f2ih6a6c" path="res://scenes/baguette/baguette.gd" id="1_gruu6"]
+[ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="2_g43ox"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vonw3"]
+radius = 12.8
+
+[node name="baguette" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_gruu6")
+
+[node name="baguette sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_g43ox")
+
+[node name="baguette collision" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
+shape = SubResource("CapsuleShape2D_vonw3")
