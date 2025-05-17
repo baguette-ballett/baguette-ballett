@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=14 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
@@ -9,6 +9,8 @@
 [ext_resource type="AudioStream" uid="uid://dcne1dgqnk5u7" path="res://assets/sounds/poop-pfft.wav" id="7_exgwc"]
 [ext_resource type="AudioStream" uid="uid://tnbk2sx0xn22" path="res://assets/sounds/poop-splat.wav" id="8_xk0cr"]
 [ext_resource type="Texture2D" uid="uid://dpcp36kepg8ox" path="res://assets/sprites/logo_transparent.png" id="9_xk0cr"]
+[ext_resource type="Texture2D" uid="uid://ch0slrurkop2q" path="res://assets/sprites/boy.png" id="10_0mgqj"]
+[ext_resource type="Texture2D" uid="uid://douvhh1rirfyx" path="res://assets/sprites/baguette.png" id="11_ueo4n"]
 
 [sub_resource type="Shortcut" id="Shortcut_1rrv8"]
 
@@ -18,7 +20,7 @@
 script = ExtResource("1_8twl8")
 
 [node name="Clean Sign" type="Sprite2D" parent="."]
-position = Vector2(842, 481)
+position = Vector2(900, 481)
 scale = Vector2(0.70459, 0.743408)
 texture = ExtResource("1_ioskq")
 
@@ -27,9 +29,9 @@ stream = ExtResource("2_yjqpq")
 autoplay = true
 
 [node name="Buttons" type="BoxContainer" parent="."]
-offset_left = 704.0
+offset_left = 765.0
 offset_top = 118.0
-offset_right = 1004.0
+offset_right = 1065.0
 offset_bottom = 218.0
 
 [node name="StartButton" type="Button" parent="Buttons"]
@@ -42,7 +44,7 @@ text = "Start"
 script = ExtResource("4_1rrv8")
 
 [node name="Duckpoop" type="CharacterBody2D" parent="."]
-position = Vector2(823, -750)
+position = Vector2(884, -750)
 scale = Vector2(0.2, 0.074)
 script = ExtResource("4_ir5dn")
 
@@ -63,5 +65,14 @@ stream = ExtResource("8_xk0cr")
 volume_db = 24.0
 
 [node name="logo" type="Sprite2D" parent="."]
-position = Vector2(336, 331)
+position = Vector2(471, 406)
 texture = ExtResource("9_xk0cr")
+
+[node name="boy" type="Sprite2D" parent="."]
+position = Vector2(168, 204)
+texture = ExtResource("10_0mgqj")
+
+[node name="baguette" type="Sprite2D" parent="boy"]
+position = Vector2(111, -60)
+scale = Vector2(0.6475, 0.6475)
+texture = ExtResource("11_ueo4n")
