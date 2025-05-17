@@ -8,6 +8,8 @@ func _on_baguette_area_entered(body):
 		get_parent().remove_child(self)
 		self.queue_free()
 
+		return
+
 	if body.name != "player" and body.name != 'baguette':
 		return
 
