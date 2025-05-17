@@ -12,7 +12,6 @@ func _on_baguette_area_entered(body):
 		self.queue_free()
 		return
 
-	print(body.name, "-", self.name)
 	if has_collide or body.name == self.name:
 		return
 
