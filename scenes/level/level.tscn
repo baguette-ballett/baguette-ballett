@@ -27,10 +27,6 @@ position = Vector2(563, -63)
 [node name="player" parent="." instance=ExtResource("2_s8ale")]
 position = Vector2(570, 457)
 
-[node name="Camera2D" type="Camera2D" parent="player"]
-position = Vector2(0, -100)
-zoom = Vector2(0.7, 0.7)
-
 [node name="ground body" type="StaticBody2D" parent="."]
 position = Vector2(574, 539)
 collision_layer = 3
