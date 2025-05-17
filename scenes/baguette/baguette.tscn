@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://douvhh1rirfyx" path="res://assets/sprites/baguette.png" id="2_fxtg6"]
 
 [node name="baguette" type="RigidBody2D"]
-collision_layer = 2
-collision_mask = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_gruu6")
 
 [node name="baguette sprite" type="Sprite2D" parent="."]
