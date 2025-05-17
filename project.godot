@@ -15,6 +15,10 @@ run/main_scene="uid://cmeelins4i38s"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://bpug1ta3a87gh"
 
+[autoload]
+
+Globals="*res://scenes/globals.gd"
+
 [display]
 
 window/size/viewport_width=1920
