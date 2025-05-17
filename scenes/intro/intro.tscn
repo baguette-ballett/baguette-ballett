@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=8 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
 [ext_resource type="AudioStream" uid="uid://cxo7w6r4tcioq" path="res://assets/sounds/duckstart_and_quack.mp3" id="2_yjqpq"]
 [ext_resource type="Texture2D" uid="uid://dt7mr2ybv7dc7" path="res://assets/sprites/duckpoop.png" id="3_teox7"]
+[ext_resource type="Script" uid="uid://6gv12wvq4gaa" path="res://scenes/intro/startButton.gd" id="4_1rrv8"]
 [ext_resource type="Script" uid="uid://cyxtftd24c51c" path="res://scenes/intro/duckpoop.gd" id="4_ir5dn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ir5dn"]
@@ -29,10 +30,11 @@ offset_bottom = 413.0
 [node name="StartButton" type="Button" parent="Buttons"]
 layout_mode = 2
 text = "Start"
+script = ExtResource("4_1rrv8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(969, 120)
-scale = Vector2(0.225098, 0.108398)
+position = Vector2(956, 463)
+scale = Vector2(1.44588, 0.769885)
 texture = ExtResource("3_teox7")
 
 [node name="Duckpoop" type="CharacterBody2D" parent="Sprite2D"]
