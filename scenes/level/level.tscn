@@ -67,16 +67,19 @@ stream = ExtResource("7_wcngd")
 autoplay = true
 
 [node name="Duckling1" type="Sprite2D" parent="."]
-position = Vector2(711, 606)
+position = Vector2(745, 605)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 flip_h = true
 
 [node name="Duckling2" type="Sprite2D" parent="."]
-position = Vector2(1078, 575)
+position = Vector2(1057, 576)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 
 [node name="Duckling3" type="Sprite2D" parent="."]
-position = Vector2(923, 631)
+position = Vector2(915, 611)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 
 [node name="Control (full layout)" type="Control" parent="."]
