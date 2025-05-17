@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=11 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dt7mr2ybv7dc7" path="res://assets/sprites/duckpoop.png" id="3_teox7"]
 [ext_resource type="Script" uid="uid://6gv12wvq4gaa" path="res://scenes/intro/startButton.gd" id="4_1rrv8"]
 [ext_resource type="Script" uid="uid://cyxtftd24c51c" path="res://scenes/intro/duckpoop.gd" id="4_ir5dn"]
+[ext_resource type="AudioStream" uid="uid://dcne1dgqnk5u7" path="res://assets/sounds/poop-pfft.wav" id="7_exgwc"]
+[ext_resource type="AudioStream" uid="uid://tnbk2sx0xn22" path="res://assets/sounds/poop-splat.wav" id="8_xk0cr"]
 
 [sub_resource type="Shortcut" id="Shortcut_1rrv8"]
 
@@ -47,3 +49,11 @@ shape = SubResource("CircleShape2D_ir5dn")
 position = Vector2(34.271, -1000)
 scale = Vector2(3.382, 5)
 texture = ExtResource("3_teox7")
+
+[node name="duckShits" type="AudioStreamPlayer" parent="Duckpoop"]
+stream = ExtResource("7_exgwc")
+volume_db = 24.0
+
+[node name="shitHitsTheSign" type="AudioStreamPlayer" parent="Duckpoop"]
+stream = ExtResource("8_xk0cr")
+volume_db = 24.0
