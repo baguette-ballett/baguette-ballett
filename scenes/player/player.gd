@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var walkSpeed = 100.0
+var walkSpeed = 1000.0
 
 func _ready():
 	print("hello world")

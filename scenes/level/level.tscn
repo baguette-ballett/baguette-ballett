@@ -1,31 +1,47 @@
-[gd_scene load_steps=6 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=8 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
+[ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
 [ext_resource type="PackedScene" uid="uid://nmxc788sia0e" path="res://scenes/player/player.tscn" id="2_s8ale"]
+[ext_resource type="Texture2D" uid="uid://d3ep8peebrglw" path="res://assets/sprites/background_right.png" id="2_vpf64"]
 [ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="3_plauu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xgho"]
-size = Vector2(1181, 48)
+size = Vector2(4056, 48)
 
 [node name="level" type="Node2D"]
 
+[node name="background left" type="Sprite2D" parent="."]
+position = Vector2(-277, 325)
+texture = ExtResource("1_hnne4")
+
+[node name="background right" type="Sprite2D" parent="."]
+position = Vector2(1643, 325)
+texture = ExtResource("2_vpf64")
+
 [node name="baguette" parent="." instance=ExtResource("1_5lpb7")]
-position = Vector2(560, 202)
+position = Vector2(563, -63)
 
 [node name="player" parent="." instance=ExtResource("2_s8ale")]
-position = Vector2(576, 593)
+position = Vector2(570, 457)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(0, -100)
+zoom = Vector2(0.7, 0.7)
 
 [node name="ground body" type="StaticBody2D" parent="."]
-position = Vector2(583, 654)
+position = Vector2(574, 539)
 collision_layer = 3
 collision_mask = 0
 physics_material_override = SubResource("PhysicsMaterial_u52ul")
 
 [node name="ground collision" type="CollisionShape2D" parent="ground body"]
+position = Vector2(55, 0)
 shape = SubResource("RectangleShape2D_5xgho")
 
 [node name="ground sprite" type="Sprite2D" parent="ground body"]
+visible = false
 scale = Vector2(9.1875, 0.382812)
 texture = ExtResource("3_plauu")
