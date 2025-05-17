@@ -1,10 +1,15 @@
 # Baguette Ballett
 
-### Mother duck needs to feed her children and luckily a boy throws bread to her
+### Mother duck needs to feed her children[^children] and luckily there's a boy[^boy] with lots of baguettes
 
-Of course, humans know that bread isn't good for ducks - but mother duck knows better!
+Be efficient and _balance_ the baguettes on your head, so you need less trips to the pond to feed your ducklings. Running around with a stack of baguettes on your head requires precision and poise, just like in ballet practice.
 
-Help her feed her ducklings, don't let the bread mold and don't let it fall, those little ducklings are very hungry!
+Don't let the bread go moldy[^moldy] and don't let it fall[^fall], those little ducklings are very hungry!
+
+[^boy]: his name is probably Francois or Jacques, definitly very French
+[^children]: see if we actually implemented ducklings in issues #18 and #19
+[^moldy]: see if we actually implemented moldy bread in issue #21
+[^fall]: dropped bread is lost forever, so be careful to catch it
 
 <img src="assets/screenshots/intro.png" width="50%" /><img src="assets/screenshots/level.png" width="50%" />
 
