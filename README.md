@@ -28,4 +28,4 @@ Thanks to [Hetzner](https://hetzner.com) for organizing this event.
   Kevin MacLeod (incompetech.com)
   Licensed under Creative Commons: By Attribution 3.0
   http://creativecommons.org/licenses/by/3.0/
-
+* [Font Franklin Gothic Medium](https://fontmeme.com/schriftarten/franklin-gothic-medium-schriftart/) from [OPTIFONT on fontmeme.com](https://fontmeme.com/schriftarten/optifont-listing/)
