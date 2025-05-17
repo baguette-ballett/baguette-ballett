@@ -1,6 +1,10 @@
 # Baguette Ballett
 
-TBD (add some description about the game)
+### Mother duck needs to feed her children and luckily a boy throws bread to her
+
+Of course, humans know that bread isn't good for ducks - but mother duck knows better!
+
+Help her feed her ducklings, don't let the bread mold and don't let it fall, those little ducklings are very hungry!
 
 <img src="assets/screenshots/menu.png" width="50%" /><img src="assets/screenshots/level.png" width="50%" />
 
@@ -18,3 +22,4 @@ Thanks to [Hetzner](https://hetzner.com) for organizing this event.
 
 ## Credits
 * [Godot Engine](https://docs.godotengine.org/en/stable/index.html)
+* [ChatGPT](https://chatgpt.com)
