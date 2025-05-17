@@ -6,8 +6,10 @@ var has_collide = false
 func _ready():
 	self.rotation_degrees = randf_range(-180.0, 180.0)
 
-func _on_baguette_area_entered(body):
-	if body.name == "ground body":
+func _on_body_entered(body):
+	if body.name == self.name:
+		print(body.name)
+	if body.name == "ground":
 		get_parent().call_deferred("remove_child", self)
 		self.queue_free()
 		return

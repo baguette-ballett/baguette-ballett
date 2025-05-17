@@ -3,18 +3,13 @@
 [ext_resource type="Script" uid="uid://58aex222u1a5" path="res://scenes/player/player.gd" id="1_cm2cf"]
 [ext_resource type="Texture2D" uid="uid://v54eeiaxubhp" path="res://assets/sprites/duck.png" id="2_dovo2"]
 
-[node name="player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("1_cm2cf")
 
-[node name="player collision" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(30, 76, -28, 76, -44, 27, -44, 14, -39, 2, -30, -5, -26, -45, -23, -55, -19, -59, -16, -67, -13, -71, -10, -74, -8, -75, 1, -75, 6, -73, 9, -71, 12, -68, 16, -61, 20, -57, 22, -54, 25, -47, 31, -1, 37, 5, 41, 12, 42, 18, 42, 27)
 
-[node name="player sprite" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_dovo2")
-
-[node name="player area" type="Area2D" parent="."]
-collision_layer = 3
-collision_mask = 3
-
-[node name="player area collision" type="CollisionPolygon2D" parent="player area"]
-polygon = PackedVector2Array(30, 76, -28, 76, -44, 27, -44, 14, -39, 2, -30, -5, -26, -45, -23, -55, -19, -59, -16, -67, -13, -71, -10, -74, -8, -75, 1, -75, 6, -73, 9, -71, 12, -68, 16, -61, 20, -57, 22, -54, 25, -47, 31, -1, 37, 5, 41, 12, 42, 18, 42, 27)
