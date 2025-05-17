@@ -7,9 +7,7 @@ func _ready():
 	self.rotation_degrees = randf_range(-180.0, 180.0)
 
 func _on_body_entered(body):
-	if body.name == self.name:
-		print(body.name)
-	if body.name == "ground":
+	if body.name == "ground body":
 		get_parent().call_deferred("remove_child", self)
 		self.queue_free()
 		return
