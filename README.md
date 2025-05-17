@@ -24,4 +24,8 @@ Thanks to [Hetzner](https://hetzner.com) for organizing this event.
 * [Godot Engine](https://docs.godotengine.org/en/stable/index.html)
 * [ChatGPT](https://chatgpt.com)
 * [Xeno Canto](https://xeno-canto.org/785938)
+* "Sergio's Magic Dustbin"
+  Kevin MacLeod (incompetech.com)
+  Licensed under Creative Commons: By Attribution 3.0
+  http://creativecommons.org/licenses/by/3.0/
 
