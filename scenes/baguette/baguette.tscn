@@ -1,10 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1lt6og2rw05e"]
+[gd_scene load_steps=3 format=3 uid="uid://c1lt6og2rw05e"]
 
 [ext_resource type="Script" uid="uid://bffd7f2ih6a6c" path="res://scenes/baguette/baguette.gd" id="1_gruu6"]
-[ext_resource type="Texture2D" uid="uid://brd8c8ispgnym" path="res://icon.svg" id="2_g43ox"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vonw3"]
-radius = 12.8
+[ext_resource type="Texture2D" uid="uid://douvhh1rirfyx" path="res://assets/sprites/baguette.png" id="2_fxtg6"]
 
 [node name="baguette" type="RigidBody2D"]
 collision_layer = 2
@@ -12,16 +9,17 @@ collision_mask = 2
 script = ExtResource("1_gruu6")
 
 [node name="baguette sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_g43ox")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_fxtg6")
 
-[node name="baguette collision" type="CollisionShape2D" parent="."]
-scale = Vector2(5, 5)
-shape = SubResource("CapsuleShape2D_vonw3")
+[node name="baguette collision" type="CollisionPolygon2D" parent="."]
+scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(76, 156, 250, -43, 366, -185, 421, -280, 432, -343, 424, -382, 397, -418, 362, -437, 319, -443, 272, -434, 223, -409, 144, -349, -7, -206, -112, -96, -221, 27, -324, 153, -385, 244, -409, 297, -417, 336, -416, 369, -404, 401, -383, 426, -353, 443, -313, 451, -266, 447, -226, 433, -188, 414, -121, 363)
 
 [node name="baguette area" type="Area2D" parent="."]
 
-[node name="baguette area collision" type="CollisionShape2D" parent="baguette area"]
-scale = Vector2(5, 5)
-shape = SubResource("CapsuleShape2D_vonw3")
+[node name="baguette area collision" type="CollisionPolygon2D" parent="baguette area"]
+scale = Vector2(0.1, 0.1)
+polygon = PackedVector2Array(76, 156, 250, -43, 366, -185, 421, -280, 432, -343, 424, -382, 397, -418, 362, -437, 319, -443, 272, -434, 223, -409, 144, -349, -7, -206, -112, -96, -221, 27, -324, 153, -385, 244, -409, 297, -417, 336, -416, 369, -404, 401, -383, 426, -353, 443, -313, 451, -266, 447, -226, 433, -188, 414, -121, 363)
 
 [connection signal="body_entered" from="baguette area" to="." method="_on_baguette_area_entered"]
