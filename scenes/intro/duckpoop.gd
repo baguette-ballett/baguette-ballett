@@ -9,7 +9,7 @@ func _physics_process(_delta):
 		if position.y > -100 and not shittingHasBeenStarted:
 			get_node("duckShits").play()
 			shittingHasBeenStarted = true
-		if position.y < 575:
+		if position.y < 828:
 			move_and_slide()
 		else:
 			get_node("shitHitsTheSign").play()
