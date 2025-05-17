@@ -15,6 +15,10 @@ run/main_scene="uid://clhd0m3qtl5xu"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 left={
