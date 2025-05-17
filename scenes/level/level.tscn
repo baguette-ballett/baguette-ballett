@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=11 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://nmxc788sia0e" path="res://scenes/player/player.tscn" id="2_s8ale"]
 [ext_resource type="Texture2D" uid="uid://d3ep8peebrglw" path="res://assets/sprites/background_right.png" id="2_vpf64"]
 [ext_resource type="PackedScene" uid="uid://5hvp3ygscuig" path="res://scenes/boy/boy.tscn" id="6_wcngd"]
+[ext_resource type="AudioStream" uid="uid://cyhrg1m2rpgmj" path="res://assets/sounds/Sergio_27s_Magic_Dustbin.mp3" id="7_wcngd"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_u52ul"]
 
@@ -56,5 +57,9 @@ rotation = 1.5708
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 1.5
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_wcngd")
+autoplay = true
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
