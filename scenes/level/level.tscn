@@ -14,7 +14,7 @@ size = Vector2(4056, 48)
 
 [sub_resource type="Curve2D" id="Curve2D_vpf64"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 115, 173, 0, 0, 0, 0, 106, 268, 0, 0, 0, 0, 198, 272, 0, 0, 0, 0, 194, 175, 0, 0, 0, 0, 115, 173)
+"points": PackedVector2Array(0, 0, 0, 0, 117, 200, 0, 0, 0, 0, 117, 253, 0, 0, 0, 0, 180, 254, 0, 0, 0, 0, 180, 198, 0, 0, 0, 0, 117, 200)
 }
 point_count = 5
 
@@ -50,8 +50,8 @@ shape = SubResource("RectangleShape2D_5xgho")
 curve = SubResource("Curve2D_vpf64")
 
 [node name="SpawnAreaLocation" type="PathFollow2D" parent="SpawnArea"]
-position = Vector2(115, 173)
-rotation = 1.66525
+position = Vector2(117, 200)
+rotation = 1.5708
 
 [node name="SpawnTimer" type="Timer" parent="."]
 wait_time = 1.5
