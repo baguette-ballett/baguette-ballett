@@ -19,6 +19,10 @@ config/icon="uid://bpug1ta3a87gh"
 
 window/stretch/mode="viewport"
 
+[gui]
+
+theme/custom_font="uid://nkrllbvd058o"
+
 [input]
 
 ui_left={

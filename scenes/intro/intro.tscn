@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=12 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cyxtftd24c51c" path="res://scenes/intro/duckpoop.gd" id="4_ir5dn"]
 [ext_resource type="AudioStream" uid="uid://dcne1dgqnk5u7" path="res://assets/sounds/poop-pfft.wav" id="7_exgwc"]
 [ext_resource type="AudioStream" uid="uid://tnbk2sx0xn22" path="res://assets/sounds/poop-splat.wav" id="8_xk0cr"]
+[ext_resource type="Texture2D" uid="uid://dpcp36kepg8ox" path="res://assets/sprites/logo_transparent.png" id="9_xk0cr"]
 
 [sub_resource type="Shortcut" id="Shortcut_1rrv8"]
 
@@ -17,7 +18,7 @@
 script = ExtResource("1_8twl8")
 
 [node name="Clean Sign" type="Sprite2D" parent="."]
-position = Vector2(908, 481)
+position = Vector2(842, 481)
 scale = Vector2(0.70459, 0.743408)
 texture = ExtResource("1_ioskq")
 
@@ -26,19 +27,22 @@ stream = ExtResource("2_yjqpq")
 autoplay = true
 
 [node name="Buttons" type="BoxContainer" parent="."]
-offset_left = 451.0
-offset_top = 359.0
-offset_right = 611.0
-offset_bottom = 413.0
+offset_left = 704.0
+offset_top = 118.0
+offset_right = 1004.0
+offset_bottom = 218.0
 
 [node name="StartButton" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(270, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.827451, 0.737255, 1)
+theme_override_font_sizes/font_size = 48
 shortcut = SubResource("Shortcut_1rrv8")
 text = "Start"
 script = ExtResource("4_1rrv8")
 
 [node name="Duckpoop" type="CharacterBody2D" parent="."]
-position = Vector2(900, -750)
+position = Vector2(823, -750)
 scale = Vector2(0.2, 0.074)
 script = ExtResource("4_ir5dn")
 
@@ -57,3 +61,7 @@ volume_db = 24.0
 [node name="shitHitsTheSign" type="AudioStreamPlayer" parent="Duckpoop"]
 stream = ExtResource("8_xk0cr")
 volume_db = 24.0
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(336, 331)
+texture = ExtResource("9_xk0cr")
