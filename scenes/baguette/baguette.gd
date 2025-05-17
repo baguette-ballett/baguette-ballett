@@ -14,14 +14,10 @@ func _on_baguette_area_entered(body):
 		
 	if has_collide or body.name == self.name:
 		return
-			
-	#has_collide = true
-	var other = body
-	var baguette = self
 
-	var joint1 = PinJoint2D.new()
-	joint1.node_a = other.get_path()
-	joint1.node_b = baguette.get_path()
-	joint1.position = baguette.global_position
-	get_tree().current_scene.add_child(joint1)
+	var joint = PinJoint2D.new()
+	joint.node_a = body.get_path()
+	joint.node_b = self.get_path()
+	joint.position = self.global_position
+	get_tree().current_scene.add_child(joint)
 	has_collide = true
