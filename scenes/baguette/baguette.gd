@@ -16,6 +16,9 @@ func _on_body_entered(body):
 	if has_collide:
 		return
 
+	if body is Player:
+		body.set_collision_mask_value(3, false)
+
 	if body is Player or body is Baguette:
 		var joint = PinJoint2D.new()
 		joint.node_a = body.get_path()
