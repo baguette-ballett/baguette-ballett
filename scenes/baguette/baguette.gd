@@ -8,10 +8,11 @@ func _ready():
 
 func _on_baguette_area_entered(body):
 	if body.name == "ground body":
-		get_parent().remove_child(self)
+		get_parent().call_deferred("remove_child", self)
 		self.queue_free()
 		return
-		
+
+	print(body.name, "-", self.name)
 	if has_collide or body.name == self.name:
 		return
 
