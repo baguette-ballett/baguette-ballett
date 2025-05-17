@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmeelins4i38s"]
+
+[ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
+[ext_resource type="AudioStream" uid="uid://cxo7w6r4tcioq" path="res://assets/sounds/duckstart_and_quack.mp3" id="2_yjqpq"]
+
+[node name="Intro" type="Node2D"]
+
+[node name="Clean Sign" type="Sprite2D" parent="."]
+position = Vector2(962, 473)
+scale = Vector2(0.354492, 0.334473)
+texture = ExtResource("1_ioskq")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yjqpq")
+autoplay = true
