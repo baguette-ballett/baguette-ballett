@@ -13,8 +13,8 @@
 script = ExtResource("1_8twl8")
 
 [node name="Clean Sign" type="Sprite2D" parent="."]
-position = Vector2(968, 510)
-scale = Vector2(0.354492, 0.334473)
+position = Vector2(908, 481)
+scale = Vector2(0.70459, 0.743408)
 texture = ExtResource("1_ioskq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -33,14 +33,14 @@ text = "Start"
 script = ExtResource("4_1rrv8")
 
 [node name="Duckpoop" type="CharacterBody2D" parent="."]
-position = Vector2(956, -750)
-scale = Vector2(0.228037, 0.0842062)
+position = Vector2(900, -750)
+scale = Vector2(0.2, 0.074)
 script = ExtResource("4_ir5dn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Duckpoop"]
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_ir5dn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Duckpoop"]
-scale = Vector2(6.34055, 9.14286)
+position = Vector2(34.271, -1000)
+scale = Vector2(3.382, 5)
 texture = ExtResource("3_teox7")
