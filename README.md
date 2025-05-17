@@ -17,4 +17,4 @@ Thanks to [Hetzner](https://hetzner.com) for organizing this event.
 * [Windows](https://baguetteballett.de/baguette-ballett.exe)
 
 ## Credits
-* TBD
+* [Godot Engine](https://docs.godotengine.org/en/stable/index.html)
