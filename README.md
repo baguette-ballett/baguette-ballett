@@ -10,7 +10,7 @@ It is licensed under GNU Affero General Public License version 3 or later.
 
 Thanks to [Hetzner](https://hetzner.com) for organizing this event.
 
-▶ Play it online on [baguetteballett.de](https://baguetteballett.de)
+**🎮 Play it online on [baguetteballett.de](https://baguetteballett.de)**
 
 ## Downloads
 * [Linux](https://baguetteballett.de/baguette-ballett.x86_64)
