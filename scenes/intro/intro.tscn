@@ -1,15 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=15 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
+[ext_resource type="Texture2D" uid="uid://c2nk766ufh61o" path="res://assets/sprites/background_intro.png" id="2_ueo4n"]
 [ext_resource type="AudioStream" uid="uid://cxo7w6r4tcioq" path="res://assets/sounds/duckstart_and_quack.mp3" id="2_yjqpq"]
 [ext_resource type="Texture2D" uid="uid://dt7mr2ybv7dc7" path="res://assets/sprites/duckpoop.png" id="3_teox7"]
 [ext_resource type="Script" uid="uid://6gv12wvq4gaa" path="res://scenes/intro/startButton.gd" id="4_1rrv8"]
 [ext_resource type="Script" uid="uid://cyxtftd24c51c" path="res://scenes/intro/duckpoop.gd" id="4_ir5dn"]
 [ext_resource type="AudioStream" uid="uid://dcne1dgqnk5u7" path="res://assets/sounds/poop-pfft.wav" id="7_exgwc"]
 [ext_resource type="AudioStream" uid="uid://tnbk2sx0xn22" path="res://assets/sounds/poop-splat.wav" id="8_xk0cr"]
-[ext_resource type="Texture2D" uid="uid://dpcp36kepg8ox" path="res://assets/sprites/logo_transparent.png" id="9_xk0cr"]
 [ext_resource type="Texture2D" uid="uid://ch0slrurkop2q" path="res://assets/sprites/boy.png" id="10_0mgqj"]
+[ext_resource type="Texture2D" uid="uid://nspc7vmqvp5y" path="res://assets/sprites/duck_baguette.png" id="10_ueo4n"]
 [ext_resource type="Texture2D" uid="uid://douvhh1rirfyx" path="res://assets/sprites/baguette.png" id="11_ueo4n"]
 
 [sub_resource type="Shortcut" id="Shortcut_1rrv8"]
@@ -19,9 +20,15 @@
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_8twl8")
 
+[node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(580.444, 322.25)
+scale = Vector2(0.60787, 0.60787)
+texture = ExtResource("2_ueo4n")
+
 [node name="Clean Sign" type="Sprite2D" parent="."]
-position = Vector2(900, 481)
-scale = Vector2(0.70459, 0.743408)
+position = Vector2(437, 537)
+scale = Vector2(0.474, 0.5)
 texture = ExtResource("1_ioskq")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -29,10 +36,10 @@ stream = ExtResource("2_yjqpq")
 autoplay = true
 
 [node name="Buttons" type="BoxContainer" parent="."]
-offset_left = 765.0
-offset_top = 118.0
-offset_right = 1065.0
-offset_bottom = 218.0
+offset_left = 850.0
+offset_top = 274.0
+offset_right = 1150.0
+offset_bottom = 374.0
 
 [node name="StartButton" type="Button" parent="Buttons"]
 custom_minimum_size = Vector2(270, 100)
@@ -44,7 +51,7 @@ text = "Start"
 script = ExtResource("4_1rrv8")
 
 [node name="Duckpoop" type="CharacterBody2D" parent="."]
-position = Vector2(884, -750)
+position = Vector2(421, -694)
 scale = Vector2(0.2, 0.074)
 script = ExtResource("4_ir5dn")
 
@@ -53,7 +60,7 @@ shape = SubResource("CircleShape2D_ir5dn")
 
 [node name="Sprite2D" type="Sprite2D" parent="Duckpoop"]
 position = Vector2(34.271, -1000)
-scale = Vector2(3.382, 5)
+scale = Vector2(2.273, 3.36)
 texture = ExtResource("3_teox7")
 
 [node name="duckShits" type="AudioStreamPlayer" parent="Duckpoop"]
@@ -65,14 +72,23 @@ stream = ExtResource("8_xk0cr")
 volume_db = 24.0
 
 [node name="logo" type="Sprite2D" parent="."]
-position = Vector2(471, 406)
-texture = ExtResource("9_xk0cr")
+position = Vector2(662, 362)
+texture = ExtResource("10_ueo4n")
 
 [node name="boy" type="Sprite2D" parent="."]
-position = Vector2(168, 204)
+position = Vector2(230, 344)
 texture = ExtResource("10_0mgqj")
 
 [node name="baguette" type="Sprite2D" parent="boy"]
-position = Vector2(111, -60)
-scale = Vector2(0.6475, 0.6475)
+position = Vector2(90.3125, -30.5112)
+scale = Vector2(0.386875, 0.386875)
 texture = ExtResource("11_ueo4n")
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 482.0
+offset_top = 41.0
+offset_right = 1012.0
+offset_bottom = 139.0
+theme_override_colors/default_color = Color(0.192157, 0.180392, 0.180392, 1)
+theme_override_font_sizes/normal_font_size = 48
+text = "Baguette Ballett"

@@ -9,10 +9,10 @@ func _physics_process(_delta):
 		if position.y > -100 and not shittingHasBeenStarted:
 			get_node("duckShits").play()
 			shittingHasBeenStarted = true
-		if position.y < 500:
+		if position.y < 575:
 			move_and_slide()
 		else:
 			get_node("shitHitsTheSign").play()
-			get_node("Sprite2D").scale.x = 10
-			get_node("Sprite2D").scale.y = 9
+			get_node("Sprite2D").scale.x = 8
+			get_node("Sprite2D").scale.y = 6
 			shitIsFalling = false
