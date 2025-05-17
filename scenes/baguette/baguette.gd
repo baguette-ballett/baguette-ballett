@@ -24,5 +24,6 @@ func _on_body_entered(body):
 		joint.node_a = body.get_path()
 		joint.node_b = self.get_path()
 		joint.position = self.global_position
+		Globals.jointBaguettes.append(joint)
 		get_tree().current_scene.add_child(joint)
 		has_collide = true
