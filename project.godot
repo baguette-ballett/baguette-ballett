@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Baguette Ballett"
-run/main_scene="uid://clhd0m3qtl5xu"
+run/main_scene="uid://cmeelins4i38s"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="uid://bpug1ta3a87gh"
 
