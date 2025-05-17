@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://5hvp3ygscuig"]
+
+[ext_resource type="Texture2D" uid="uid://ch0slrurkop2q" path="res://assets/sprites/boy.png" id="1_oxyhe"]
+
+[node name="Boy" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_oxyhe")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 35.0
+offset_top = -57.0
+offset_right = 248.0
+offset_bottom = -17.0
+text = "je suis un garçon"
