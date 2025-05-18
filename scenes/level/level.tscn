@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=24 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
@@ -21,6 +21,72 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 117, 200, 0, 0, 0, 0, 117, 253, 0, 0, 0, 0, 180, 254, 0, 0, 0, 0, 180, 198, 0, 0, 0, 0, 117, 200)
 }
 point_count = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0bv2"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7m21"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pm6rs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0bv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7m21")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrc4q"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4oov"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivku7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrc4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4oov")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss4b2"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqsm"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fkkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss4b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqsm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_vpf64")
@@ -78,21 +144,24 @@ stream = ExtResource("7_wcngd")
 autoplay = true
 parameters/looping = true
 
-[node name="Duckling1" type="Sprite2D" parent="."]
+[node name="Duckling1" type="AnimatedSprite2D" parent="."]
 position = Vector2(1237, 920)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_tf2q7")
+sprite_frames = SubResource("SpriteFrames_pm6rs")
+autoplay = "default"
 flip_h = true
 
-[node name="Duckling2" type="Sprite2D" parent="."]
+[node name="Duckling2" type="AnimatedSprite2D" parent="."]
 position = Vector2(1549, 891)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_tf2q7")
+sprite_frames = SubResource("SpriteFrames_ivku7")
+autoplay = "default"
 
-[node name="Duckling3" type="Sprite2D" parent="."]
+[node name="Duckling3" type="AnimatedSprite2D" parent="."]
 position = Vector2(1407, 926)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_tf2q7")
+sprite_frames = SubResource("SpriteFrames_0fkkc")
+autoplay = "default"
 
 [node name="Control (full layout)" type="Control" parent="."]
 visible = false
