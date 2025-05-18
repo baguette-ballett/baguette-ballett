@@ -7,8 +7,8 @@ var d3LiveLeft = 100
 @export var baguettes: PackedScene
 
 func _process(_delta):
-	if Input.is_action_pressed("ui_r_key"):
-		get_tree().reload_current_scene()
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://scenes/intro/intro.tscn")
 	if Globals.game_won:
 		$Duckling1.flip_h = false
 		$Duckling1.translate(Vector2(-10,-10))
