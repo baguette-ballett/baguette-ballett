@@ -49,9 +49,9 @@ func _on_duckling_dead_timer_timeout():
 	if Globals.ducklingsLifeLeft[2] < 0:
 		d3.rotation = PI
 		d3.stop()
-	Globals.ducklingsLifeLeft[0] -= 0.25
-	Globals.ducklingsLifeLeft[1] -= 0.25
-	Globals.ducklingsLifeLeft[2] -= 0.25
+	Globals.ducklingsLifeLeft[0] -= 0.5
+	Globals.ducklingsLifeLeft[1] -= 0.5
+	Globals.ducklingsLifeLeft[2] -= 0.5
 
 func _on_game_end_timer_timeout():
 	Globals.game_won = true
