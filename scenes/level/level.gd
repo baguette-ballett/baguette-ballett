@@ -13,11 +13,14 @@ func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/intro/intro.tscn")
 	if Globals.game_won:
-		$Duckling1.flip_h = false
-		$Duckling1.translate(Vector2(-10,-10))
-		$Duckling2.translate(Vector2(-10,-10))
-		$Duckling3.translate(Vector2(-10,-10))
-	if $Duckling1.global_position.y < -200:
+		if d1LiveLeft > 0:
+			$Duckling1.flip_h = false
+			$Duckling1.translate(Vector2(-10,-10))
+		if d2LiveLeft > 0:
+			$Duckling2.translate(Vector2(-10,-10))
+		if d3LiveLeft > 0:
+			$Duckling3.translate(Vector2(-10,-10))
+	if $player.global_position.y < -600:
 		get_tree().change_scene_to_file("res://scenes/intro/intro.tscn")
 
 func _on_spawn_timer_timeout():
