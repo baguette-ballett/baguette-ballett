@@ -2,6 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 var walkSpeed = 1000.0
+var acceleration = 0.2
 
 func _ready():
 	Globals.player = self
@@ -13,8 +14,8 @@ func _physics_process(delta):
 
 func get_input(delta):
 	if Input.is_action_pressed("ui_right"):
-		velocity.x = lerp(velocity.x, walkSpeed, 0.3)
+		velocity.x = lerp(velocity.x, walkSpeed, acceleration)
 	elif Input.is_action_pressed("ui_left"):
-		velocity.x = lerp(velocity.x, walkSpeed*-1.0, 0.3)
+		velocity.x = lerp(velocity.x, walkSpeed*-1.0, acceleration)
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.1)
