@@ -8,7 +8,9 @@ func _ready():
 	self.rotation_degrees = randf_range(-180.0, 180.0)
 
 func _physics_process(delta):
-	if abs(self.global_position.x - Globals.player.global_position.x) < 50:
+	var diffX = abs(self.global_position.x - Globals.player.global_position.x)
+	var diffY = Globals.player.global_position.y - self.global_position.y
+	if diffX < 100 and diffY < 200 and diffY > -10:
 		var direction = (Globals.player.global_position - self.global_position).normalized()
 		direction.y = 0
 		self.apply_impulse(direction*1000)
