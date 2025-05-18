@@ -1,6 +1,6 @@
 # Baguette Ballett
 
-Mother duck needs to feed her children[^children] and luckily there's a boy[^boy] with lots of baguettes.
+Parent duck needs to feed her children[^children] and luckily there's a boy[^boy] with lots of baguettes.
 
 Be efficient and _balance_ the baguettes on your head, so you need fewer trips to the pond to feed your ducklings. Running around with a stack of baguettes on your head requires precision and poise, just like in ballet practice.
 
