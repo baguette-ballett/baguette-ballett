@@ -49,8 +49,17 @@ position = Vector2(-616, -46)
 shape = SubResource("RectangleShape2D_pe1ox")
 
 [node name="wall right" type="CollisionShape2D" parent="ground body"]
+visible = false
 position = Vector2(1346, -47)
 shape = SubResource("RectangleShape2D_pe1ox")
+
+[node name="Area2D" type="Area2D" parent="ground body"]
+position = Vector2(847, -41)
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground body/Area2D"]
+polygon = PackedVector2Array(479, -99, 483, 14, -390, 16, -382, -105)
 
 [node name="SpawnArea" type="Path2D" parent="."]
 position = Vector2(71, 218)
@@ -86,6 +95,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("8_tf2q7")
 
 [node name="Control (full layout)" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -117,7 +127,11 @@ texture_normal = ExtResource("8_sytrn")
 action = "right"
 visibility_mode = 1
 
+
 [node name="DucklingsCalling" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_m0bv2")
+
+[connection signal="body_entered" from="ground body/Area2D" to="player" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ground body/Area2D" to="player" method="_on_area_2d_body_exited"]
 
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
