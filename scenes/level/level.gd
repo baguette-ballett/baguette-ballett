@@ -4,6 +4,9 @@ extends Node2D
 
 func _ready():
 	Globals.game_won = false
+	Globals.d1LiveLeft = 100
+	Globals.d2LiveLeft = 100
+	Globals.d3LiveLeft = 100
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
