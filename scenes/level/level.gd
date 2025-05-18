@@ -51,9 +51,9 @@ func _on_duckling_dead_timer_timeout():
 	if Globals.d3LiveLeft < 0:
 		d3.rotation = PI
 		d3.stop()
-	Globals.d1LiveLeft -= 10
-	Globals.d2LiveLeft -= 10
-	Globals.d3LiveLeft -= 10
+	Globals.d1LiveLeft -= 1
+	Globals.d2LiveLeft -= 1
+	Globals.d3LiveLeft -= 1
 
 
 func _on_game_end_timer_timeout():
