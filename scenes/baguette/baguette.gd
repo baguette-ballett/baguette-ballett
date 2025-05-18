@@ -22,9 +22,7 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 	if body is Ground:
-		Globals.baguettes.erase(self)
-		get_parent().call_deferred("remove_child", self)
-		self.queue_free()
+		destroy()
 		return
 
 	if has_collide:
@@ -35,3 +33,8 @@ func _on_body_entered(body):
 
 	if body is Player or body is Baguette:
 		has_collide = true
+
+func destroy():
+	Globals.baguettes.erase(self)
+	get_parent().call_deferred("remove_child", self)
+	self.queue_free()
