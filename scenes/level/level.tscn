@@ -200,7 +200,11 @@ stream = ExtResource("12_m0bv2")
 [node name="DucklingDeadTimer" type="Timer" parent="."]
 autostart = true
 
+[node name="GameEndTimer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="body_entered" from="ground body/Area2D" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="ground body/Area2D" to="player" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
 [connection signal="timeout" from="DucklingDeadTimer" to="." method="_on_duckling_dead_timer_timeout"]
+[connection signal="timeout" from="GameEndTimer" to="." method="_on_game_end_timer_timeout"]

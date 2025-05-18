@@ -6,7 +6,7 @@ var d3LiveLeft = 100
 
 @export var baguettes: PackedScene
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("ui_r_key"):
 		get_tree().reload_current_scene()
 	if Globals.game_won:
@@ -47,3 +47,7 @@ func _on_duckling_dead_timer_timeout():
 	d1LiveLeft -= 10
 	d2LiveLeft -= 10
 	d3LiveLeft -= 10
+
+
+func _on_game_end_timer_timeout():
+	Globals.gameWon = true

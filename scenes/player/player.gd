@@ -16,7 +16,7 @@ func _physics_process(delta):
 		get_input(delta)
 	move_and_slide()
 
-func get_input(delta):
+func get_input(_delta):
 	if Input.is_action_pressed("ui_right"):
 		velocity.x = lerp(velocity.x, walkSpeed, acceleration)
 	elif Input.is_action_pressed("ui_left"):

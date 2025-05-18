@@ -9,7 +9,7 @@ func _ready():
 	self.rotation_degrees = randf_range(-180.0, 180.0)
 	Globals.baguettes.append(self)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var diffX = abs(self.global_position.x - Globals.player.global_position.x)
 	var diffY = Globals.player.global_position.y - self.global_position.y
 	if diffX < 100 and diffY < 200 and diffY > -10:
