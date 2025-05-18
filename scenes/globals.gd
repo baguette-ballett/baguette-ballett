@@ -2,6 +2,7 @@ extends Node
 
 var baguettes = []
 var player
+var game_won = false
 
 var playerOverPond = false
 

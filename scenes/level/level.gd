@@ -5,6 +5,11 @@ extends Node2D
 func _process(delta):
 	if Input.is_action_pressed("ui_r_key"):
 		get_tree().reload_current_scene()
+	if Globals.game_won:
+		$Duckling1.flip_h = false
+		$Duckling1.translate(Vector2(-10,-10))
+		$Duckling2.translate(Vector2(-10,-10))
+		$Duckling3.translate(Vector2(-10,-10))
 
 func _on_spawn_timer_timeout():
 	var baguette = baguettes.instantiate()

@@ -8,8 +8,12 @@ func _ready():
 	Globals.player = self
 
 func _physics_process(delta):
-	velocity.y = 100.0
-	get_input(delta)
+	if Globals.game_won:
+		velocity.y = walkSpeed*-1.0
+		velocity.x = walkSpeed*-1.0
+	else:
+		velocity.y = 100.0
+		get_input(delta)
 	move_and_slide()
 
 func get_input(delta):
