@@ -50,4 +50,4 @@ func _on_duckling_dead_timer_timeout():
 
 
 func _on_game_end_timer_timeout():
-	Globals.gameWon = true
+	Globals.game_won = true

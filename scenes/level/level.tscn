@@ -202,6 +202,7 @@ autostart = true
 
 [node name="GameEndTimer" type="Timer" parent="."]
 wait_time = 5.0
+autostart = true
 
 [connection signal="body_entered" from="ground body/Area2D" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="ground body/Area2D" to="player" method="_on_area_2d_body_exited"]
