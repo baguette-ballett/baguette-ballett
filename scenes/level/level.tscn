@@ -18,7 +18,7 @@ size = Vector2(20, 50)
 
 [sub_resource type="Curve2D" id="Curve2D_vpf64"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 117, 200, 0, 0, 0, 0, 117, 253, 0, 0, 0, 0, 180, 254, 0, 0, 0, 0, 180, 198, 0, 0, 0, 0, 117, 200)
+"points": PackedVector2Array(0, 0, 0, 0, 136, 424, 0, 0, 0, 0, 224, 424, 0, 0, 0, 0, 224, 472, 0, 0, 0, 0, 136, 472, 0, 0, 0, 0, 136, 424)
 }
 point_count = 5
 
@@ -128,15 +128,13 @@ collision_mask = 15
 polygon = PackedVector2Array(479, -99, 483, 14, -390, 16, -382, -105)
 
 [node name="SpawnArea" type="Path2D" parent="."]
-position = Vector2(71, 218)
 curve = SubResource("Curve2D_vpf64")
 
 [node name="SpawnAreaLocation" type="PathFollow2D" parent="SpawnArea"]
-position = Vector2(117, 200)
-rotation = 1.5708
+position = Vector2(136, 424)
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 3.0
 autostart = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
@@ -196,11 +194,9 @@ texture_normal = ExtResource("8_sytrn")
 action = "right"
 visibility_mode = 1
 
-
 [node name="DucklingsCalling" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_m0bv2")
 
 [connection signal="body_entered" from="ground body/Area2D" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="ground body/Area2D" to="player" method="_on_area_2d_body_exited"]
-
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]

@@ -13,4 +13,3 @@ func getBaguettesInRange():
 func setPlayrOverPond(value) ->void:
 	playerOverPond = value
 	print(playerOverPond)
-
