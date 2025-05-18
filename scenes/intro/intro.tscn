@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=25 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
@@ -18,6 +18,72 @@
 [sub_resource type="Shortcut" id="Shortcut_1rrv8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ir5dn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfk32"]
+atlas = ExtResource("13_kfk32")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ypwg"]
+atlas = ExtResource("13_kfk32")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_14p5w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfk32")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ypwg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyqjm"]
+atlas = ExtResource("13_kfk32")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbxqg"]
+atlas = ExtResource("13_kfk32")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hs2o6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xyqjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbxqg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivhsj"]
+atlas = ExtResource("13_kfk32")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pykff"]
+atlas = ExtResource("13_kfk32")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ixtfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivhsj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pykff")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Intro" type="Node2D"]
 script = ExtResource("1_8twl8")
@@ -106,18 +172,18 @@ theme_override_font_sizes/normal_font_size = 90
 text = "Baguette Ballett"
 metadata/_edit_use_anchors_ = true
 
-[node name="Duckling1" type="Sprite2D" parent="."]
+[node name="Duckling1" type="AnimatedSprite2D" parent="."]
 position = Vector2(1283, 929)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("13_kfk32")
+sprite_frames = SubResource("SpriteFrames_14p5w")
 flip_h = true
 
-[node name="Duckling2" type="Sprite2D" parent="."]
+[node name="Duckling2" type="AnimatedSprite2D" parent="."]
 position = Vector2(1634, 903)
 scale = Vector2(0.421875, 0.5)
-texture = ExtResource("13_kfk32")
+sprite_frames = SubResource("SpriteFrames_hs2o6")
 
-[node name="Duckling3" type="Sprite2D" parent="."]
+[node name="Duckling3" type="AnimatedSprite2D" parent="."]
 position = Vector2(1511, 944)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("13_kfk32")
+sprite_frames = SubResource("SpriteFrames_ixtfl")

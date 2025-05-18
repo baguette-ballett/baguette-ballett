@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://clhd0m3qtl5xu"]
+[gd_scene load_steps=24 format=3 uid="uid://clhd0m3qtl5xu"]
 
 [ext_resource type="PackedScene" uid="uid://c1lt6og2rw05e" path="res://scenes/baguette/baguette.tscn" id="1_5lpb7"]
 [ext_resource type="Texture2D" uid="uid://cvw5cqouxdake" path="res://assets/sprites/background_left.png" id="1_hnne4"]
@@ -18,9 +18,75 @@ size = Vector2(20, 50)
 
 [sub_resource type="Curve2D" id="Curve2D_vpf64"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 117, 200, 0, 0, 0, 0, 117, 253, 0, 0, 0, 0, 180, 254, 0, 0, 0, 0, 180, 198, 0, 0, 0, 0, 117, 200)
+"points": PackedVector2Array(0, 0, 0, 0, 136, 424, 0, 0, 0, 0, 224, 424, 0, 0, 0, 0, 224, 472, 0, 0, 0, 0, 136, 472, 0, 0, 0, 0, 136, 424)
 }
 point_count = 5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0bv2"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b7m21"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pm6rs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0bv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b7m21")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrc4q"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4oov"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivku7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrc4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4oov")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss4b2"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(0, 0, 128, 112)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqsm"]
+atlas = ExtResource("8_tf2q7")
+region = Rect2(128, 0, 128, 112)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0fkkc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss4b2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqsm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_vpf64")
@@ -49,42 +115,54 @@ position = Vector2(-616, -46)
 shape = SubResource("RectangleShape2D_pe1ox")
 
 [node name="wall right" type="CollisionShape2D" parent="ground body"]
+visible = false
 position = Vector2(1346, -47)
 shape = SubResource("RectangleShape2D_pe1ox")
 
+[node name="Area2D" type="Area2D" parent="ground body"]
+position = Vector2(847, -41)
+collision_layer = 15
+collision_mask = 15
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ground body/Area2D"]
+polygon = PackedVector2Array(479, -99, 483, 14, -390, 16, -382, -105)
+
 [node name="SpawnArea" type="Path2D" parent="."]
-position = Vector2(71, 218)
 curve = SubResource("Curve2D_vpf64")
 
 [node name="SpawnAreaLocation" type="PathFollow2D" parent="SpawnArea"]
-position = Vector2(117, 200)
-rotation = 1.5708
+position = Vector2(136, 424)
 
 [node name="SpawnTimer" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 3.0
 autostart = true
 
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_wcngd")
 autoplay = true
+parameters/looping = true
 
-[node name="Duckling1" type="Sprite2D" parent="."]
+[node name="Duckling1" type="AnimatedSprite2D" parent="."]
 position = Vector2(1237, 920)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_tf2q7")
+sprite_frames = SubResource("SpriteFrames_pm6rs")
+autoplay = "default"
 flip_h = true
 
-[node name="Duckling2" type="Sprite2D" parent="."]
+[node name="Duckling2" type="AnimatedSprite2D" parent="."]
 position = Vector2(1549, 891)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_tf2q7")
+sprite_frames = SubResource("SpriteFrames_ivku7")
+autoplay = "default"
 
-[node name="Duckling3" type="Sprite2D" parent="."]
+[node name="Duckling3" type="AnimatedSprite2D" parent="."]
 position = Vector2(1407, 926)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_tf2q7")
+sprite_frames = SubResource("SpriteFrames_0fkkc")
+autoplay = "default"
 
 [node name="Control (full layout)" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -119,4 +197,14 @@ visibility_mode = 1
 [node name="DucklingsCalling" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_m0bv2")
 
+[node name="DucklingDeadTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="GameEndTimer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="body_entered" from="ground body/Area2D" to="player" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="ground body/Area2D" to="player" method="_on_area_2d_body_exited"]
 [connection signal="timeout" from="SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="DucklingDeadTimer" to="." method="_on_duckling_dead_timer_timeout"]
+[connection signal="timeout" from="GameEndTimer" to="." method="_on_game_end_timer_timeout"]
