@@ -35,9 +35,9 @@ func _on_duckling_dead_timer_timeout():
 	var d1 = get_node("Duckling1")
 	var d2 = get_node("Duckling2")
 	var d3 = get_node("Duckling3")
-	d1.modulate = Color(d1LiveLeft/10, 0, 0)
-	d2.modulate = Color(d2LiveLeft/10, 0, 0)
-	d3.modulate = Color(d3LiveLeft/10, 0, 0)
+	d1.modulate = Color((0.5/100 * d1LiveLeft) + 0.5, (0.5/100 * d1LiveLeft) + 0.5, (0.5/100 * d1LiveLeft) + 0.5)
+	d2.modulate = Color((0.5/100 * d2LiveLeft) + 0.5, (0.5/100 * d2LiveLeft) + 0.5, (0.5/100 * d2LiveLeft) + 0.5)
+	d3.modulate = Color((0.5/100 * d3LiveLeft) + 0.5, (0.5/100 * d3LiveLeft) + 0.5, (0.5/100 * d3LiveLeft) + 0.5)
 	if d1LiveLeft < 0:
 		d1.rotation = PI
 		d1.stop()
