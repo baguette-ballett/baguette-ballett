@@ -28,9 +28,10 @@ func get_input(_delta):
 		var balancedBaguettes = Globals.getBaguettesInRange()
 		for b in balancedBaguettes:
 			b.destroy()
-			var ids = [0, 1, 2]
-			ids.shuffle()
-			for id in ids:
+			var lifes = Globals.ducklingsLifeLeft
+			lifes.sort()
+			for life in lifes:
+				var id = Globals.ducklingsLifeLeft.find(life)
 				if Globals.ducklingsLifeLeft[id] < 100 and Globals.ducklingsLifeLeft[id] >= 1:
 					Globals.ducklingsLifeLeft[id] = 100
 					break
