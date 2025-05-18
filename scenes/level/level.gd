@@ -24,7 +24,7 @@ func _on_spawn_timer_timeout():
 	var baguette = baguettes.instantiate()
 	var location = get_node("SpawnArea/SpawnAreaLocation")
 	location.progress_ratio = randf()
-	
+
 	baguette.position = location.position
 
 	baguette.rotation = randf_range(-PI / 4, PI / 4)
@@ -49,10 +49,9 @@ func _on_duckling_dead_timer_timeout():
 	if Globals.ducklingsLifeLeft[2] < 0:
 		d3.rotation = PI
 		d3.stop()
-	Globals.ducklingsLifeLeft[0] -= 1
-	Globals.ducklingsLifeLeft[1] -= 1
-	Globals.ducklingsLifeLeft[2] -= 1
-
+	Globals.ducklingsLifeLeft[0] -= 0.25
+	Globals.ducklingsLifeLeft[1] -= 0.25
+	Globals.ducklingsLifeLeft[2] -= 0.25
 
 func _on_game_end_timer_timeout():
 	if Globals.ducklingsLifeLeft[0] > 0 and Globals.ducklingsLifeLeft[1] > 0 and Globals.ducklingsLifeLeft[2] > 0:
