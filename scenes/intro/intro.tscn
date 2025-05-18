@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=26 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
