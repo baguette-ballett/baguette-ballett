@@ -1,8 +1,6 @@
 extends Node
 
-var d1LiveLeft = 100
-var d2LiveLeft = 100
-var d3LiveLeft = 100
+var ducklingsLifeLeft = [100, 100, 100]
 
 var baguettes = []
 var player

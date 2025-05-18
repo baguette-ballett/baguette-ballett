@@ -22,19 +22,18 @@ func get_input(_delta):
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x = lerp(velocity.x, walkSpeed*-1.0, acceleration)
 	elif Input.is_action_just_pressed("ui_down"):
+		if not Globals.playerOverPond:
+			return
+
 		var balancedBaguettes = Globals.getBaguettesInRange()
-		if Globals.playerOverPond:
-			for b in balancedBaguettes:
-				b.destroy()
-				if Globals.d1LiveLeft < 100 and Globals.d1LiveLeft >= 1:
-					Globals.d1LiveLeft = 100
-					continue
-				if Globals.d2LiveLeft < 100 and Globals.d2LiveLeft >= 1:
-					Globals.d2LiveLeft = 100
-					continue
-				if Globals.d3LiveLeft < 100 and Globals.d3LiveLeft >= 1:
-					Globals.d3LiveLeft = 100
-					continue
+		for b in balancedBaguettes:
+			b.destroy()
+			var ids = [0, 1, 2]
+			ids.shuffle()
+			for id in ids:
+				if Globals.ducklingsLifeLeft[id] < 100 and Globals.ducklingsLifeLeft[id] >= 1:
+					Globals.ducklingsLifeLeft[id] = 100
+					break
 	else:
 		velocity.x = lerp(velocity.x, 0.0, 0.1)
 
