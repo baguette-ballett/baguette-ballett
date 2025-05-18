@@ -1,5 +1,9 @@
 extends Node
 
+var d1LiveLeft = 100
+var d2LiveLeft = 100
+var d3LiveLeft = 100
+
 var baguettes = []
 var player
 var game_won = false
@@ -12,4 +16,3 @@ func getBaguettesInRange():
 
 func setPlayrOverPond(value) ->void:
 	playerOverPond = value
-	print(playerOverPond)
