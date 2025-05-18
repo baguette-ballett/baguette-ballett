@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://c08qkbngytrx4"]
+
+[ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_d6fdb"]
+[ext_resource type="Texture2D" uid="uid://c2nk766ufh61o" path="res://assets/sprites/background_intro.png" id="2_ym1o5"]
+[ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="3_gqllp"]
+[ext_resource type="AudioStream" uid="uid://cxo7w6r4tcioq" path="res://assets/sounds/duckstart_and_quack.mp3" id="4_r6igs"]
+[ext_resource type="Script" uid="uid://sms0ldnqjy8h" path="res://scenes/credits/back_button.gd" id="5_lwbe5"]
+[ext_resource type="Script" uid="uid://bqi5a5dpbvod0" path="res://scenes/credits/credits.gd" id="9_lwbe5"]
+[ext_resource type="Texture2D" uid="uid://ch0slrurkop2q" path="res://assets/sprites/boy.png" id="11_1to5v"]
+[ext_resource type="Texture2D" uid="uid://douvhh1rirfyx" path="res://assets/sprites/baguette.png" id="12_28bn4"]
+[ext_resource type="Texture2D" uid="uid://dlcxs7ernhhm4" path="res://assets/sprites/duckling.png" id="13_n2rmv"]
+
+[sub_resource type="Shortcut" id="Shortcut_1rrv8"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_d6fdb")
+
+[node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(960, 540)
+texture = ExtResource("2_ym1o5")
+
+[node name="Clean Sign" type="Sprite2D" parent="."]
+position = Vector2(721, 869)
+scale = Vector2(0.474, 0.5)
+texture = ExtResource("3_gqllp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r6igs")
+autoplay = true
+
+[node name="Buttons" type="BoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 100)
+offset_left = 1474.0
+offset_top = 411.0
+offset_right = 1774.0
+offset_bottom = 511.0
+
+[node name="BackButton" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.827451, 0.737255, 1)
+theme_override_font_sizes/font_size = 48
+shortcut = SubResource("Shortcut_1rrv8")
+text = "Zurück"
+script = ExtResource("5_lwbe5")
+
+[node name="boy" type="Sprite2D" parent="."]
+position = Vector2(390, 650)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("11_1to5v")
+
+[node name="baguette" type="Sprite2D" parent="boy"]
+position = Vector2(90.3125, -30.5112)
+scale = Vector2(0.386875, 0.386875)
+texture = ExtResource("12_28bn4")
+
+[node name="title" type="RichTextLabel" parent="."]
+offset_left = 778.0
+offset_top = 69.0
+offset_right = 1778.0
+offset_bottom = 269.0
+theme_override_colors/default_color = Color(0.192157, 0.180392, 0.180392, 1)
+theme_override_font_sizes/normal_font_size = 90
+text = "Credits"
+metadata/_edit_use_anchors_ = true
+
+[node name="Duckling1" type="Sprite2D" parent="."]
+position = Vector2(1283, 929)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_n2rmv")
+flip_h = true
+
+[node name="Duckling2" type="Sprite2D" parent="."]
+position = Vector2(1634, 903)
+scale = Vector2(0.421875, 0.5)
+texture = ExtResource("13_n2rmv")
+
+[node name="Duckling3" type="Sprite2D" parent="."]
+position = Vector2(1511, 944)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_n2rmv")
+
+[node name="credits" type="RichTextLabel" parent="."]
+offset_left = 631.0
+offset_top = 370.0
+offset_right = 1434.0
+offset_bottom = 727.0
+theme_override_colors/default_color = Color(0.192157, 0.180392, 0.180392, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+script = ExtResource("9_lwbe5")

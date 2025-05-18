@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cmeelins4i38s"]
+[gd_scene load_steps=17 format=3 uid="uid://cmeelins4i38s"]
 
 [ext_resource type="Script" uid="uid://wqyldb5ltt6k" path="res://scenes/intro/intro.gd" id="1_8twl8"]
 [ext_resource type="Texture2D" uid="uid://b1gs4c58kfka4" path="res://assets/sprites/notfeedducks_sign_clean.png" id="1_ioskq"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dt7mr2ybv7dc7" path="res://assets/sprites/duckpoop.png" id="3_teox7"]
 [ext_resource type="Script" uid="uid://6gv12wvq4gaa" path="res://scenes/intro/startButton.gd" id="4_1rrv8"]
 [ext_resource type="Script" uid="uid://cyxtftd24c51c" path="res://scenes/intro/duckpoop.gd" id="4_ir5dn"]
+[ext_resource type="Script" uid="uid://c2givwf1csk8n" path="res://scenes/intro/credits_button.gd" id="6_2ypwg"]
 [ext_resource type="AudioStream" uid="uid://dcne1dgqnk5u7" path="res://assets/sounds/poop-pfft.wav" id="7_exgwc"]
 [ext_resource type="AudioStream" uid="uid://tnbk2sx0xn22" path="res://assets/sounds/poop-splat.wav" id="8_xk0cr"]
 [ext_resource type="Texture2D" uid="uid://ch0slrurkop2q" path="res://assets/sprites/boy.png" id="10_0mgqj"]
@@ -41,6 +42,7 @@ offset_left = 1474.0
 offset_top = 411.0
 offset_right = 1774.0
 offset_bottom = 511.0
+vertical = true
 
 [node name="StartButton" type="Button" parent="Buttons"]
 custom_minimum_size = Vector2(200, 100)
@@ -50,6 +52,15 @@ theme_override_font_sizes/font_size = 48
 shortcut = SubResource("Shortcut_1rrv8")
 text = "Start"
 script = ExtResource("4_1rrv8")
+
+[node name="CreditsButton" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.901961, 0.827451, 0.737255, 1)
+theme_override_font_sizes/font_size = 48
+shortcut = SubResource("Shortcut_1rrv8")
+text = "Credits"
+script = ExtResource("6_2ypwg")
 
 [node name="Duckpoop" type="CharacterBody2D" parent="."]
 position = Vector2(721, -122)
