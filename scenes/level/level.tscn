@@ -67,6 +67,7 @@ autostart = true
 [node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_wcngd")
 autoplay = true
+parameters/looping = true
 
 [node name="Duckling1" type="Sprite2D" parent="."]
 position = Vector2(1237, 920)
