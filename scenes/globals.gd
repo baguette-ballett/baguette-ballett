@@ -1,4 +1,4 @@
 extends Node
 
-var jointBaguettes = []
+var baguettes = []
 var player
