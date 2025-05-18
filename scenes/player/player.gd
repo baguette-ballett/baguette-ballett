@@ -28,7 +28,7 @@ func get_input(_delta):
 		var balancedBaguettes = Globals.getBaguettesInRange()
 		for b in balancedBaguettes:
 			b.destroy()
-			var lifes = Globals.ducklingsLifeLeft
+			var lifes = Globals.ducklingsLifeLeft.duplicate()
 			lifes.sort()
 			for life in lifes:
 				var id = Globals.ducklingsLifeLeft.find(life)
