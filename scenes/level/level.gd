@@ -6,6 +6,9 @@ var d3LiveLeft = 100
 
 @export var baguettes: PackedScene
 
+func _ready():
+	Globals.game_won = false
+
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().change_scene_to_file("res://scenes/intro/intro.tscn")
