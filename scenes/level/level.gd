@@ -17,6 +17,8 @@ func _process(_delta):
 		$Duckling1.translate(Vector2(-10,-10))
 		$Duckling2.translate(Vector2(-10,-10))
 		$Duckling3.translate(Vector2(-10,-10))
+	if $Duckling1.global_position.y < -200:
+		get_tree().change_scene_to_file("res://scenes/intro/intro.tscn")
 
 func _on_spawn_timer_timeout():
 	var baguette = baguettes.instantiate()
@@ -53,4 +55,7 @@ func _on_duckling_dead_timer_timeout():
 
 
 func _on_game_end_timer_timeout():
-	Globals.game_won = true
+	if d1LiveLeft > 0 and d2LiveLeft > 0 and d3LiveLeft > 0:
+		Globals.game_won = true
+	else:
+		print("You lost!")
