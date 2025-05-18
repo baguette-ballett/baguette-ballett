@@ -54,7 +54,4 @@ func _on_duckling_dead_timer_timeout():
 	Globals.ducklingsLifeLeft[2] -= 0.25
 
 func _on_game_end_timer_timeout():
-	if Globals.ducklingsLifeLeft[0] > 0 and Globals.ducklingsLifeLeft[1] > 0 and Globals.ducklingsLifeLeft[2] > 0:
-		Globals.game_won = true
-	else:
-		print("You lost!")
+	Globals.game_won = true
