@@ -53,5 +53,9 @@ func _on_duckling_dead_timer_timeout():
 	Globals.ducklingsLifeLeft[1] -= 0.5
 	Globals.ducklingsLifeLeft[2] -= 0.5
 
+	if Globals.ducklingsLifeLeft[0] < 0 and Globals.ducklingsLifeLeft[1] < 0 and Globals.ducklingsLifeLeft[2] < 0:
+		get_tree().change_scene_to_file("res://scenes/intro/intro.tscn")
+		print("You Lost!")
+
 func _on_game_end_timer_timeout():
 	Globals.game_won = true
