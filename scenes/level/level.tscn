@@ -165,7 +165,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="bottom right" type="MarginContainer" parent="Control (full layout)"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(340, 120)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -177,13 +177,20 @@ grow_vertical = 0
 
 [node name="button left" type="TouchScreenButton" parent="Control (full layout)/bottom right"]
 texture_normal = ExtResource("7_xv074")
-action = "left"
+action = "ui_left"
+visibility_mode = 1
+
+[node name="button down" type="TouchScreenButton" parent="Control (full layout)/bottom right"]
+position = Vector2(100, 80)
+rotation = -1.5708
+texture_normal = ExtResource("7_xv074")
+action = "ui_down"
 visibility_mode = 1
 
 [node name="button right" type="TouchScreenButton" parent="Control (full layout)/bottom right"]
-position = Vector2(100, 0)
+position = Vector2(200, 0)
 texture_normal = ExtResource("8_sytrn")
-action = "right"
+action = "ui_right"
 visibility_mode = 1
 
 [node name="DucklingsCalling" type="AudioStreamPlayer2D" parent="."]
