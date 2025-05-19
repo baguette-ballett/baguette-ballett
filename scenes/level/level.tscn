@@ -109,8 +109,7 @@ position = Vector2(-616, -46)
 shape = SubResource("RectangleShape2D_pe1ox")
 
 [node name="wall right" type="CollisionShape2D" parent="ground body"]
-visible = false
-position = Vector2(1346, -47)
+position = Vector2(1370, -47)
 shape = SubResource("RectangleShape2D_pe1ox")
 
 [node name="Area2D" type="Area2D" parent="ground body"]
